@@ -1,0 +1,23 @@
+/**app.wxss**/
+.container {
+	height: 100%;
+	justify-content: space-between;
+	text-align: center;
+	padding: 40px 0;
+	box-sizing: border-box;
+	font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+}
+
+.title {
+	font-size: 26px;
+	margin-top: 20px;
+}
+
+.desc {
+	font-size: 14px;
+	margin-top: 20px;
+}
+
+.link {
+	color: #5ba4e5;
+}

@@ -1,0 +1,7 @@
+.idea
+.DS_Store
+dist
+tmp
+node_modules
+_old
+config.custom.js

@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="container">
+ <view class="title">weapp-workflow</view>
+ <view class="desc link">https://github.com/Jeff2Ma/weapp-workflow</view>
+ <view class="desc">基于Gulp 的微信小程序前端开发工作流</view>
+ <view class="desc">Github: Jeff2Ma</view>
+</view>

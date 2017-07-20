@@ -1,0 +1,47 @@
+// https://github.com/twbs/bootstrap-sass/tree/master/assets/stylesheets/bootstrap/mixins
+
+// 文字截取
+@mixin text-overflow() {
+	overflow: hidden;
+	white-space: normal;
+	text-overflow: ellipsis;
+	word-break: break-all;
+	word-wrap: normal;
+}
+
+// 清除浮动
+@mixin clearfix() {
+	&:before,
+	&:after {
+		content: " "; // 1
+		display: table; // 2
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+// Single side border-radius
+@mixin border-top-radius($radius) {
+	border-top-right-radius: $radius;
+	border-top-left-radius: $radius;
+}
+@mixin border-right-radius($radius) {
+	border-bottom-right-radius: $radius;
+	border-top-right-radius: $radius;
+}
+@mixin border-bottom-radius($radius) {
+	border-bottom-right-radius: $radius;
+	border-bottom-left-radius: $radius;
+}
+@mixin border-left-radius($radius) {
+	border-bottom-left-radius: $radius;
+	border-top-left-radius: $radius;
+}
+
+// Center-align a block level element
+@mixin center-block() {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
