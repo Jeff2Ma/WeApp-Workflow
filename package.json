@@ -1,48 +1,50 @@
 {
-  "name": "weapp-workflow",
-  "version": "0.0.1",
-  "description": "A workflow for better weapp developing.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Jeff2Ma/weapp-workflow.git"
-  },
-  "keywords": [
-    "workflow",
-    "weapp",
-    "wexin",
-    "wechat",
-    "css",
-    "wxml",
-    "wxss"
-  ],
-  "author": "Jeff2Ma",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Jeff2Ma/weapp-workflow/issues"
-  },
-  "homepage": "https://github.com/Jeff2Ma/weapp-workflow#readme",
-  "devDependencies": {
-    "del": "^3.0.0",
-    "gulp": "git://github.com/gulpjs/gulp#4.0",
-    "gulp-cached": "^1.1.1",
-    "gulp-debug": "^3.1.0",
-    "gulp-if": "^2.0.2",
-    "gulp-imagemin": "^3.3.0",
-    "gulp-newer": "^1.3.0",
-    "gulp-postcss": "^7.0.0",
-    "gulp-qcloud-upload": "^2.2.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-replace": "^0.6.1",
-    "gulp-sass": "^3.1.0",
-    "gulp-sftp": "^0.1.5",
-    "gulp-util": "^3.0.8",
-    "postcss-font-base64": "^1.0.4",
-    "postcss-lazysprite": "^1.6.1",
-    "postcss-px2rpx": "0.0.4",
-    "yargs": "^8.0.2"
-  }
+    "name": "weapp-workflow",
+    "version": "0.0.1",
+    "description": "A workflow for better weapp developing.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Jeff2Ma/weapp-workflow.git"
+    },
+    "keywords": [
+        "gulp",
+        "gulpjs",
+        "workflow",
+        "weapp",
+        "wexin",
+        "wechat",
+        "css",
+        "wxml",
+        "wxss"
+    ],
+    "author": "Jeff2Ma",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Jeff2Ma/weapp-workflow/issues"
+    },
+    "homepage": "https://github.com/Jeff2Ma/weapp-workflow#readme",
+    "devDependencies": {
+        "del": "^3.0.0",
+        "gulp": "git://github.com/gulpjs/gulp#4.0",
+        "gulp-cached": "^1.1.1",
+        "gulp-debug": "^3.1.0",
+        "gulp-if": "^2.0.2",
+        "gulp-imagemin": "^3.3.0",
+        "gulp-newer": "^1.3.0",
+        "gulp-postcss": "^7.0.0",
+        "gulp-qcloud-upload": "^2.2.0",
+        "gulp-rename": "^1.2.2",
+        "gulp-replace": "^0.6.1",
+        "gulp-sass": "^3.1.0",
+        "gulp-sftp": "^0.1.5",
+        "gulp-util": "^3.0.8",
+        "postcss-font-base64": "^1.0.4",
+        "postcss-lazysprite": "^1.6.1",
+        "postcss-px2rpx": "0.0.4",
+        "yargs": "^8.0.2"
+    }
 }

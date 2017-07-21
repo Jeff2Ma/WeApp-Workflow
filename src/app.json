@@ -18,13 +18,13 @@
                 "pagePath": "pages/index/index",
                 "iconPath": "image/icon_API.png",
                 "selectedIconPath": "image/icon_API_HL.png",
-                "text": "能力"
+                "text": "介绍"
             },
             {
                 "pagePath": "pages/index/index",
                 "iconPath": "image/icon_component.png",
                 "selectedIconPath": "image/icon_component_HL.png",
-                "text": "扩展"
+                "text": "功能"
             }
         ]
     }

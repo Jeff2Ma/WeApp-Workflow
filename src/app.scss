@@ -1,4 +1,22 @@
-/**app.wxss**/
+/**
+ * ------------------------------------------------------------------
+ * app.scss 入口文件
+ *
+ * ------------------------------------------------------------------
+ *
+ * @author  JeffMa
+ * @link    https://devework.com/
+ * @data    2017-06-11
+ */
+
+// 支持文件
+@import "assets/scss/support";
+
+// 原子类
+@import "assets/scss/utils";
+
+@lazysprite "filetype";
+
 .container {
 	height: 100%;
 	justify-content: space-between;
@@ -6,18 +24,4 @@
 	padding: 40px 0;
 	box-sizing: border-box;
 	font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
-}
-
-.title {
-	font-size: 26px;
-	margin-top: 20px;
-}
-
-.desc {
-	font-size: 14px;
-	margin-top: 20px;
-}
-
-.link {
-	color: #5ba4e5;
 }

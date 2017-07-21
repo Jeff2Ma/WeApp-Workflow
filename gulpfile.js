@@ -4,7 +4,7 @@
  * ------------------------------------------------------------------
  *
  * @author  JeffMa
- * @link    http://devework.com/
+ * @link    https://devework.com/
  * @data    2017-06-11
  */
 
@@ -75,6 +75,7 @@ var lazyspriteConfig = {
 	spritePath: paths.src.assetsDir + '/images',
 	smartUpdate: false,
 	cssSeparator: '-',
+	outputExtralCSS: true,
 	nameSpace: 'icon-'
 };
 
@@ -109,8 +110,9 @@ function assetsImgMin() {
 
 // Sass 编译
 function sassCompile() {
+	var res = config.assetsCDN + config.qcloud.prefix;
 	return gulp.src(paths.src.scssFiles)
-		.pipe(sass({errLogToConsole: true})
+		.pipe(sass({errLogToConsole: true,outputStyle: 'expanded'})
 			.on('error', sass.logError))
 		.pipe(gulpif(Boolean(argv.debug),debug({title: '`sassCompile` Debug:'})))
 		.pipe(postcss([lazysprite(lazyspriteConfig), pxtorpx(), base64()]))
@@ -118,6 +120,7 @@ function sassCompile() {
 			'extname': '.wxss'
 		}))
 		.pipe(replace('.scss', '.wxss'))
+		.pipe(replace('src/assets/images', res)) // 雪碧图CSS RUL 中的图片路径
 		.pipe(gulp.dest(paths.dist.baseDir))
 }
 
@@ -144,7 +147,7 @@ function wxmlImgRewrite() {
 		.pipe(gulp.dest(paths.dist.baseDir))
 }
 
-// 重写CSS RUL 中的图片路径
+// 重写CSS RUL 中的图片路径，待废弃
 function wxssImgRewrite() {
 	var res = config.assetsCDN + config.qcloud.prefix;
 	return gulp.src(paths.dist.wxssFiles)
@@ -192,7 +195,7 @@ var watchHandler = function (type, file) {
 			del([tmp]);
 		} else {
 			sassCompile();
-			wxssImgRewrite();
+			// wxssImgRewrite();
 		}
 	}
 	// 图片文件
@@ -211,6 +214,17 @@ var watchHandler = function (type, file) {
 		}
 	}
 
+	// wxml
+	else if (extname === '.wxml') {
+		if (type === 'removed') {
+			var tmp = file.replace('src/', 'dist/')
+			del([tmp]);
+		} else {
+			copyWXML();
+			wxmlImgRewrite();
+		}
+	}
+
 	// 其余文件
 	else {
 		if (type === 'removed') {
@@ -219,7 +233,7 @@ var watchHandler = function (type, file) {
 		} else {
 			copyBasicFiles();
 			// copyWXML();
-			wxmlImgRewrite();
+			// wxmlImgRewrite();
 		}
 	}
 };
@@ -257,7 +271,7 @@ gulp.task('default', gulp.series(
 	imageMin,
 	assetsImgMin,
 	copyWXML,
-	wxssImgRewrite,
+	// wxssImgRewrite,
 	wxmlImgRewrite,
 	qcloudCDN,
 	watch

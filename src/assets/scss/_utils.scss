@@ -1,0 +1,88 @@
+/**
+ * ------------------------------------------------------------------
+ * 原子类
+ *
+ * ------------------------------------------------------------------
+ *
+ * @author  JeffMa
+ * @link    https://devework.com/
+ * @data    2017-06-11
+ */
+
+@import "support";
+
+.u-va-b {
+	vertical-align: bottom;
+}
+
+.u-va-m {
+	vertical-align: middle;
+}
+
+.u-va-t {
+	vertical-align: top;
+}
+
+// 布局方位
+.u-ta-c {
+	text-align: center;
+}
+
+.u-ta-l {
+	text-align: left;
+}
+
+.u-ta-r {
+	text-align: right;
+}
+
+.u-fl-l {
+	float: left;
+}
+
+.u-fl-n {
+	float: none;
+}
+
+.u-fl-r {
+	float: right;
+}
+
+.u-d-b {
+	display: block;
+}
+
+.u-d-i {
+	display: inline !important;
+}
+
+.u-d-ib {
+	display: inline-block !important;
+}
+
+.u-d-n {
+	display: none !important;
+}
+
+.u-d-t {
+	display: table;
+	table-layout: fixed;
+}
+
+.u-d-tc {
+	display: table-cell;
+}
+
+// clearfix
+.u-clearfix {
+	@include clearfix;
+}
+
+// 虚拟格式
+.u-cur-d {
+	cursor: default;
+}
+
+.u-cur-p {
+	cursor: pointer;
+}

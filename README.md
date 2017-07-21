@@ -1,4 +1,4 @@
-# weapp-workflow
+# WeApp-Workflow
 
 > 基于Gulp 的微信小程序前端开发工作流
 
