@@ -147,14 +147,6 @@ function wxmlImgRewrite() {
 		.pipe(gulp.dest(paths.dist.baseDir))
 }
 
-// 重写CSS RUL 中的图片路径，待废弃
-function wxssImgRewrite() {
-	var res = config.assetsCDN + config.qcloud.prefix;
-	return gulp.src(paths.dist.wxssFiles)
-		.pipe(replace('src/assets/images', res)) // 雪碧图CSS RUL 中的图片路径
-		.pipe(gulp.dest(paths.dist.baseDir))
-}
-
 // clean 任务, dist 目录
 function cleanDist() {
 	return del(paths.dist.baseDir);
@@ -195,7 +187,6 @@ var watchHandler = function (type, file) {
 			del([tmp]);
 		} else {
 			sassCompile();
-			// wxssImgRewrite();
 		}
 	}
 	// 图片文件
@@ -271,7 +262,6 @@ gulp.task('default', gulp.series(
 	imageMin,
 	assetsImgMin,
 	copyWXML,
-	// wxssImgRewrite,
 	wxmlImgRewrite,
 	qcloudCDN,
 	watch
