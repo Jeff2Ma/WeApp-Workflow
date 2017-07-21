@@ -1,15 +1,26 @@
 <!--index.wxml-->
-<view class="container index">
+<view class="app index">
 	<view class="index__header">
 		<view class="index__header-title">WeApp-Workflow</view>
 		<view class="index__header-desc index__header-link">https://github.com/Jeff2Ma/WeApp-Workflow</view>
 		<view class="index__header-desc">基于Gulp 的微信小程序前端开发工作流</view>
 		<view class="index__header-desc">Github: Jeff2Ma</view>
 	</view>
-	
-	<image src="../../assets/images/qr-r4.jpg"></image>
-	<image src="../../assets/images/qr-r1.jpg"></image>
+
 	<view class="index__content">
-		<view class="icon-filetype icon-filetype-ppt">fasdfasdf</view>
+
+		<image src="../../assets/images/t.png"></image>
+
+		<view class="index__content-icons u-flex">
+			<view class="index__content-icons-item u-flex-item">
+				<text class="icon-filetype icon-filetype-pdf"></text>
+			</view>
+			<view class="index__content-icons-item u-flex-item">
+				<text class="icon-filetype icon-filetype-ppt"></text>
+			</view>
+			<view class="index__content-icons-item u-flex-item">
+				<text class="icon-filetype icon-filetype-doc"></text>
+			</view>
+		</view>
 	</view>
 </view>

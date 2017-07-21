@@ -258,17 +258,19 @@ function watch(cb) {
 gulp.task('default', gulp.series(
 	cleanTmp,
 	copyBasicFiles,
-	sassCompile,
-	imageMin,
-	assetsImgMin,
-	copyWXML,
+	gulp.parallel(
+		sassCompile,
+		imageMin,
+		copyWXML
+	),
 	wxmlImgRewrite,
+	assetsImgMin,
 	qcloudCDN,
 	watch
 ));
 
 // 删除任务
-gulp.task('clean', gulp.series(
+gulp.task('clean', gulp.parallel(
 	cleanTmp,
 	cleanDist
 ));
