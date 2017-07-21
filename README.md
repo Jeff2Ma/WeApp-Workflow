@@ -6,7 +6,7 @@
 
 WeApp-Workflow 是一个专门为开发微信小程序打造的前端开发工作流，基于Gulp 4 开发，旨在通过工作流的方式解决微信小程序开发过程中写前端代码的痛点。
 
-## 功能
+## 开发详解
 
 ### SCSS 实时编译为 WXSS
 
@@ -88,7 +88,7 @@ WeApp-Workflow 是一个专门为开发微信小程序打造的前端开发工�
     height: 80px;
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio:2), only screen and (-o-min-device-pixel-ratio:2/1), only screen and (min-device-pixel-ratio:2), only screen and (min-resolution:2dppx), only screen and (min-resolution:192dpi) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio:2) {
     .icon-filetype-doc {
         background-image: url(../sprites/filetype@2x.png);
         background-position: 0 0;
@@ -137,7 +137,8 @@ WeApp-Workflow 是一个专门为开发微信小程序打造的前端开发工�
 │   ├── image // 小程序专用的图片资源（如tabbar icon）目录
 │   ├── pages
 │   └── utils
-└── dist // 通过src 目录编译后的文件目录，也是小程序开发的项目目录
+├── tmp //  通过src 目录编译后生成的缓存目录
+└── dist // 通过src 目录编译后生成的文件目录，也是小程序开发的项目目录
 
 ```
 
@@ -150,11 +151,12 @@ WeApp-Workflow 是一个专门为开发微信小程序打造的前端开发工�
 1、首先通过`git clone`下载项目文件。
 
 ```
-git clone https://github.com/Jeff2Ma/DeveWork-WeApp
+git clone https://github.com/Jeff2Ma/WeApp-Workflow
 ```
 2、建议删除`.git`目录
 
 ```
+cd WeApp-Workflow
 rm -rf .git
 ```
 
@@ -186,16 +188,28 @@ gulp
 
 ![](src/assets/images/screenshot-init-project4@2x.png)
 
+接下来进入常规开发即可。开发过程中，**使用第三方编辑器（WebStorm、Sublime Text 等）编辑`src`目录下的文件**，保存修改后gulp 进程会实时编译到`dist`目录相应的位置。而**“微信web 开发者工具”仅充当预览功能**。
 
-接下来进入开发即可。
 
+## Q&A
 
-## QA
+- Q：为什么工作流中没有AutoPrefixer 的功能？
 
-- Q：为什么工作流中没有Autoprefixer 的功能？
-
-	A：因为微信开发者工具的“项目”中已经提供了这个功能；
+	A：因为微信开发者工具的“项目”中“样式补全”选项已经提供了这个功能；
 
 - Q：为什么工作流中配置bable 的ES6 转ES5 的功能？
 
-	A：如上。
+	A：如上，微信开发者工具已经提供。
+	
+## 案例展示
+
+这些小程序采用 WeApp-Workflow 作为开发工作流：
+
+![devework+微信小程序](src/assets/images/qr-r.jpg)
+
+	
+## TODO
+
+- [ ] 上传到FTP/SFTP 服务器功能
+
+- [ ] 支持七牛云存储的CDN

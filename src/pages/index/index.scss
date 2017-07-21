@@ -19,6 +19,10 @@
 	color: #5ba4e5;
 }
 
+.index__content {
+	margin-top: 40px;
+}
+
 .index__content-icons {
 	align-items: center;
 }
@@ -26,4 +30,9 @@
 .index__content-icons-item {
 	font-size: 0;
 	line-height: 0;
+}
+
+.index_qrcode {
+	width: 150px;
+	height: 150px;
 }

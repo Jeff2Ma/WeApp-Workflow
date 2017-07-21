@@ -1,26 +1,51 @@
 <!--index.wxml-->
 <view class="app index">
-	<view class="index__header">
-		<view class="index__header-title">WeApp-Workflow</view>
-		<view class="index__header-desc index__header-link">https://github.com/Jeff2Ma/WeApp-Workflow</view>
-		<view class="index__header-desc">基于Gulp 的微信小程序前端开发工作流</view>
-		<view class="index__header-desc">Github: Jeff2Ma</view>
-	</view>
 
-	<view class="index__content">
+	<view class="app_inner">
+		<view class="index__header">
+			<view class="index__header-title">WeApp-Workflow</view>
+			<view class="index__header-desc index__header-link">https://github.com/Jeff2Ma/WeApp-Workflow</view>
+			<view class="index__header-desc">基于Gulp 的微信小程序前端开发工作流</view>
+			<view class="index__header-desc">Github: Jeff2Ma</view>
+		</view>
 
-		<image src="../../assets/images/t.png"></image>
+		<view class="index__content">
 
-		<view class="index__content-icons u-flex">
-			<view class="index__content-icons-item u-flex-item">
-				<text class="icon-filetype icon-filetype-pdf"></text>
+			<view class="app__title">font Icon演示</view>
+			<view class="u-flex">
+				<view class="u-flex-item">
+					<view class="u-d-ib icon icon-info"></view>
+				</view>
+				<view class="u-flex-item">
+					<view class="u-d-ib icon icon-date"></view>
+
+				</view>
+
+				<view class="u-flex-item">
+					<view class="u-d-ib icon icon-view"></view>
+
+				</view>
 			</view>
-			<view class="index__content-icons-item u-flex-item">
-				<text class="icon-filetype icon-filetype-ppt"></text>
+
+			<view class="u-mt-large app__title">雪碧图演示</view>
+			<view class="app__desc">提示：因网络问题演示雪碧图可能失效</view>
+			<view class="index__content-icons u-flex">
+				<view class="index__content-icons-item u-flex-item">
+					<text class="icon-filetype icon-filetype-pdf"></text>
+				</view>
+				<view class="index__content-icons-item u-flex-item">
+					<text class="icon-filetype icon-filetype-ppt"></text>
+				</view>
+				<view class="index__content-icons-item u-flex-item">
+					<text class="icon-filetype icon-filetype-doc"></text>
+				</view>
 			</view>
-			<view class="index__content-icons-item u-flex-item">
-				<text class="icon-filetype icon-filetype-doc"></text>
-			</view>
+
+
+			<view class="u-mt-large app__title">外部图片演示</view>
+
+			<view class="app__desc">提示：因网络问题演示图片可能失效</view>
+			<image src="../../assets/images/qr-r@2x.jpg" background-size="cover" class="index_qrcode"></image>
 		</view>
 	</view>
 </view>

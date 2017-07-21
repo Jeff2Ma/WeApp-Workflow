@@ -8,19 +8,88 @@
  * @link    https://devework.com/
  * @data    2017-06-11
  */
-
 @import "support";
 
-.u-va-b {
-	vertical-align: bottom;
+// Margin
+.u-mt-smaller {
+	margin-top: $marginTopSmaller;
 }
 
-.u-va-m {
-	vertical-align: middle;
+.u-mt-small {
+	margin-top: $marginTopSmall;
 }
 
-.u-va-t {
-	vertical-align: top;
+.u-mt-medium {
+	margin-top: $marginTopMedium;
+}
+
+.u-mt-large {
+	margin-top: $marginTopLarge;
+}
+
+.u-mt-larger {
+	margin-top: $marginTopLarger;
+}
+
+.u-mb-smaller {
+	margin-bottom: $marginTopSmaller;
+}
+
+.u-mb-small {
+	margin-bottom: $marginTopSmall;
+}
+
+.u-mb-medium {
+	margin-bottom: $marginTopMedium;
+}
+
+.u-mb-large {
+	margin-bottom: $marginTopLarge;
+}
+
+.u-mb-larger {
+	margin-bottom: $marginTopLarger;
+}
+
+// Padding
+.u-pt-smaller {
+	padding-top: $paddingTopSmaller;
+}
+
+.u-pt-small {
+	padding-top: $paddingTopSmall;
+}
+
+.u-pt-medium {
+	padding-top: $paddingTopMedium;
+}
+
+.u-pt-large {
+	padding-top: $paddingTopLarge;
+}
+
+.u-pt-larger {
+	padding-top: $paddingTopLarger;
+}
+
+.u-pb-smaller {
+	padding-bottom: $paddingTopSmaller;
+}
+
+.u-pb-small {
+	padding-bottom: $paddingTopSmall;
+}
+
+.u-pb-medium {
+	padding-bottom: $paddingTopMedium;
+}
+
+.u-pb-large {
+	padding-bottom: $paddingTopLarge;
+}
+
+.u-pb-larger {
+	padding-bottom: $paddingTopLarger;
 }
 
 // 布局方位
@@ -73,6 +142,18 @@
 	display: table-cell;
 }
 
+.u-va-b {
+	vertical-align: bottom;
+}
+
+.u-va-m {
+	vertical-align: middle;
+}
+
+.u-va-t {
+	vertical-align: top;
+}
+
 // clearfix
 .u-clearfix {
 	@include clearfix;
@@ -99,3 +180,4 @@
 	-webkit-flex: 1;
 	flex: 1;
 }
+

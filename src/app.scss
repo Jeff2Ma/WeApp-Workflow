@@ -18,8 +18,6 @@
 // 雪碧图
 @lazysprite "filetype";
 
-// web font icon
-
 .app {
 	height: 100%;
 	justify-content: space-between;
@@ -29,6 +27,62 @@
 	font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
 }
 
-.app__tile {
-
+.app_inner {
+	margin: 20px;
 }
+
+.app__title {
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: bold;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	text-align: left;
+	border-bottom: .5px solid #EEEEEE;
+}
+
+.app__desc {
+	font-size: 12px;
+	line-height: 14px;
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+// web font icon
+@font-face {
+	font-family: 'fontello';
+	src: url("assets/fonts/fontello.ttf") format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+	font-family: "fontello";
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	margin-right: 0.2em;
+	text-align: center;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1em;
+	margin-left: 0.2em;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-info:before {
+	content: '\e81b';
+}
+
+.icon-date:before {
+	content: '\e829';
+}
+
+.icon-view:before {
+	content: '\e84f';
+}
+
