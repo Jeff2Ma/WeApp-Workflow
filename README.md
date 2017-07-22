@@ -8,7 +8,7 @@
 
 WeApp-Workflow 是一个专门为开发微信小程序打造的前端开发工作流，基于Gulp 4 开发，旨在通过工作流的方式解决微信小程序开发过程中写前端代码的痛点。
 
-## 开发详解
+## 功能
 
 ### SCSS 实时编译为 WXSS
 
@@ -146,7 +146,7 @@ WeApp-Workflow 是一个专门为开发微信小程序打造的前端开发工�
 
 ## 开始使用
 
-> 因为该工作流涉及到第三方依赖，建议在科学上网的环境下操作。
+> Node 版本建议在v4 以上。因为该工作流涉及到第三方依赖，建议在科学上网的环境下操作。
 
 ### 安装
 
@@ -167,6 +167,8 @@ rm -rf .git
 ```
 npm i
 ```
+> Gulp4 目前未正式发布，Windows 用户请先安装 [git](http://git-scm.com/)，然后在 [Git Bash](http://git-for-windows.github.io/) 下执行`npm i`即可（非 CMD）。
+
 4、启动开发
 
 ```
@@ -206,6 +208,10 @@ gulp
 
 ### 开发
 
+<p align="center">
+<img src="src/assets/images/s5.png" alt="开发" style="max-width:600px;height: auto;">
+</p>
+
 1、根据个人需求进行gulp 配置：建议复制`config.js`并重命名为`config.custom.js`，然后根据个人实际需求改写相关配置信息（每个配置项均有注释说明）。
 
 2、接下来进入常规开发即可。开发过程中，**使用第三方编辑器（WebStorm、Sublime Text 等）编辑`src`目录下的文件**，保存修改后gulp 进程会实时编译到`dist`目录相应的位置。而**微信web 开发者工具会自动编译刷新，此时仅充当预览功能**。
@@ -236,9 +242,7 @@ gulp
 
 这些小程序采用 WeApp-Workflow 作为开发工作流：
 
-<p align="center">
-<img src="src/assets/images/qr-r@2x.jpg" alt="devework+微信小程序" style="max-width:220px;height: auto;">
-</p>
+![devework+微信小程序](src/assets/images/qr-r.jpg)
 
 ## 鸣谢
 
@@ -251,6 +255,8 @@ gulp
 [gulp-qcloud-upload](https://github.com/Jeff2Ma/gulp-qcloud-upload)
 	
 ## TODO
+
+- [ ] 增加单元测试
 
 - [ ] ES6 Rewrite
 

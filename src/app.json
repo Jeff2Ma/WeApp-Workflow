@@ -6,7 +6,7 @@
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "weapp-workflow",
+        "navigationBarTitleText": "WeApp-Workflow",
         "navigationBarTextStyle": "black"
     },
     "tabBar": {
