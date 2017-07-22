@@ -1,4 +1,6 @@
-![weapp-workflow](src/assets/images/weapp-worfkflow-banner2@2x.jpg)
+<p align="center">
+  <a href="https://github.com/Jeff2Ma/WeApp-Workflow" target="_blank"><img src="src/assets/images/weapp-worfkflow-banner2@2x.jpg" alt="WeApp-Workflow"></a>
+</p>
 
 > WeApp-Workflow：基于Gulp 的微信小程序前端开发工作流
 
@@ -105,9 +107,9 @@ WeApp-Workflow 是一个专门为开发微信小程序打造的前端开发工�
 
 ## 特征
 
-### Gulp4 + ES2015
+### Gulp4
 
-采用最新的Gulp 4版本的新特征，并用ES2015 的写法，让工作流运行更快。
+采用最新的Gulp 4版本的新特征，让工作流运行更快。
 
 ### 简洁不简单
 
@@ -171,22 +173,36 @@ npm i
 gulp
 ```
 
+其余任务：`gulp clean`：清除`dist`，`tmp`文件夹。
+
 ### 配置
 
 完成以上操作后，需要在“微信web 开发者工具”也进行相关设置。
 
 1、新建项目，记住选择`dist`文件夹作为项目目录。
 
-![](src/assets/images/screenshot-init-project1@2x.png)
-![](src/assets/images/screenshot-init-project2@2x.png)
+<p align="center">
+<img src="src/assets/images/s1.png" alt="WeApp-Workflow配置" style="max-width:600px;height: auto;">
+</p>
+
+<p align="center">
+<img src="src/assets/images/s2.png" alt="WeApp-Workflow配置" style="max-width:600px;height: auto;">
+</p>
+
 
 2、建立并进入项目后，勾选如下两个选项（“ES6 转 ES5”、“样式补全”）。后两个选项视实际情况选择。
 
-![](src/assets/images/screenshot-init-project3@2x.png)
+<p align="center">
+<img src="src/assets/images/s3.png" alt="WeApp-Workflow配置" style="max-width:600px;height: auto;">
+</p>
+
 
 同时菜单项进入设置，勾选如下两个选项：
 
-![](src/assets/images/screenshot-init-project4@2x.png)
+<p align="center">
+<img src="src/assets/images/s4.png" alt="WeApp-Workflow配置" style="max-width:600px;height: auto;">
+</p>
+
 
 ### 开发
 
@@ -220,10 +236,23 @@ gulp
 
 这些小程序采用 WeApp-Workflow 作为开发工作流：
 
-![devework+微信小程序](src/assets/images/qr-r.jpg)
+<p align="center">
+<img src="src/assets/images/qr-r@2x.jpg" alt="devework+微信小程序" style="max-width:220px;height: auto;">
+</p>
 
+## 鸣谢
+
+[tmt-workflow](https://github.com/Tencent/tmt-workflow)
+
+[QMUI_Web](https://github.com/QMUI/QMUI_Web)
+
+[postcss-lazysprite](https://github.com/Jeff2Ma/postcss-lazysprite) 
+
+[gulp-qcloud-upload](https://github.com/Jeff2Ma/gulp-qcloud-upload)
 	
 ## TODO
+
+- [ ] ES6 Rewrite
 
 - [ ] 上传到FTP/SFTP 服务器功能
 
