@@ -24,5 +24,5 @@ module.exports = {
 			"Cache-Control": "max-age=5184000"
 		}
 	},
-	"assetsCDN": "https://devework.com/"
+	"assetsCDN": "https://res.jianhui.org/"
 };

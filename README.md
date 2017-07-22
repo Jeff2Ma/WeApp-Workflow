@@ -1,6 +1,6 @@
-# WeApp-Workflow
+![weapp-workflow](src/assets/images/weapp-worfkflow-banner2@2x.jpg)
 
-> 基于Gulp 的微信小程序前端开发工作流
+> WeApp-Workflow：基于Gulp 的微信小程序前端开发工作流
 
 ## 介绍
 
@@ -41,13 +41,13 @@ WeApp-Workflow 是一个专门为开发微信小程序打造的前端开发工�
 
 ```html
 // Input: src/pages/index/index.wxml
-<image src="../../assets/images/t.png"></image>
+<image src="%ASSETS_IMG%/t.png"></image>
 
 // Output: dist/pages/index/index.wxml
 <image src="https://cdn.devework.com/weapp/devework/t.png"></image>
 ```
 
-### 转化Font 文件为base64 编码
+### Font 文件转为base64 编码
 
 小程序不支持相对路径的字体文件，本功能可以将CSS 中的font 文件转码为base64 并替换原路径。
 
@@ -111,7 +111,7 @@ WeApp-Workflow 是一个专门为开发微信小程序打造的前端开发工�
 
 ### 简洁不简单
 
-核心只有一个默认任务，通过合理的任务搭配机制减少繁琐流程及来回运行终端，让开发更简单。
+核心只有一个默认任务，通过合理的任务搭配机制减少繁琐流程及来回运行终端，让开发更便捷。
 
 ### 增量更新机制，运行起来更快
 
@@ -188,8 +188,23 @@ gulp
 
 ![](src/assets/images/screenshot-init-project4@2x.png)
 
-接下来进入常规开发即可。开发过程中，**使用第三方编辑器（WebStorm、Sublime Text 等）编辑`src`目录下的文件**，保存修改后gulp 进程会实时编译到`dist`目录相应的位置。而**“微信web 开发者工具”仅充当预览功能**。
+### 开发
 
+1、根据个人需求进行gulp 配置：建议复制`config.js`并重命名为`config.custom.js`，然后根据个人实际需求改写相关配置信息（每个配置项均有注释说明）。
+
+2、接下来进入常规开发即可。开发过程中，**使用第三方编辑器（WebStorm、Sublime Text 等）编辑`src`目录下的文件**，保存修改后gulp 进程会实时编译到`dist`目录相应的位置。而**微信web 开发者工具会自动编译刷新，此时仅充当预览功能**。
+
+开发要点说明：
+
+- **SCSS 开发**：直接在`src/pages/page-name`下进行编辑`page-name.scss`，会自动转化为`page-name.wxss` 并放置到`dist`目录相应位置。开发过程中涉及到数值的地方直接写`px`单位（按iPhone6 为标准设计稿），会自动计算转化为`rpx`单位。如果特殊情况不想转化，请写大写的`PX`。
+
+- **WXML开发**：无特殊要求。
+
+- **WebFont**：现在fontell.com 这类网站制作好雪碧图然后拿到ttf 的形式的文件到`src/assets/fonts`下，常规方式引用即可自动base64 转码。
+
+- **CDN 图片**：（该功能默认关闭，需自行在设置项开启）微信小程序中wxss 或wxml 不支持相对路径的图片，需要https 开头的绝对路径。本工作流可以使得开发时候直接写相对路径，工作流会帮忙上传到CDN 并替换原路径。此类图片必须放置到`src/assets/images`下，然后在wxml 或CSS 中用`%ASSETS_IMG%/filename.png`的方式写路径。`%ASSETS_IMG%`为自定义的目录供后续字符串替换。
+
+- **雪碧图**：首先在小程序中不建议用雪碧图，直接用单图或者WebFont的形式更好。如果非要用的话，按照代码中的小程序示例放置小图目录到`src/assets/sprites`下然后在SCSS 中通过`@lazysprite "xxxx"`调用即可（建议调用代码放到`app.scss`下）。
 
 ## Q&A
 

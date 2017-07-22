@@ -94,15 +94,15 @@
 
 // 布局方位
 .u-ta-c {
-	text-align: center;
+	text-align: center !important;
 }
 
 .u-ta-l {
-	text-align: left;
+	text-align: left !important;
 }
 
 .u-ta-r {
-	text-align: right;
+	text-align: right !important;
 }
 
 .u-fl-l {
@@ -179,5 +179,29 @@
 	-webkit-box-flex: 1;
 	-webkit-flex: 1;
 	flex: 1;
+}
+
+// 小程序中模拟ul、li
+.u-ul {
+	padding-left: 15px;
+	text-align: left;
+	display: block;
+}
+
+.u-li {
+	position: relative;
+	font-size: $fontSizeSmall;
+	line-height: $fontSizeSmall + 2px;
+	margin-bottom: $marginTopSmall;
+	&:before {
+		position: absolute;
+		content: " ";
+		top: 7px;
+		left: -10px;
+		width: 4px;
+		height: 4px;
+		border-radius: 4px;
+		background-color: $colorBlack;
+	}
 }
 

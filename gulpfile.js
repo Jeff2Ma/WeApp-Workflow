@@ -110,7 +110,7 @@ function assetsImgMin() {
 
 // Sass 编译
 function sassCompile() {
-	var res = config.assetsCDN + config.qcloud.prefix;
+	var res = config.assetsCDN + config.qcloud.prefix + '/';
 	return gulp.src(paths.src.scssFiles)
 		.pipe(sass({errLogToConsole: true,outputStyle: 'expanded'})
 			.on('error', sass.logError))
@@ -120,6 +120,7 @@ function sassCompile() {
 			'extname': '.wxss'
 		}))
 		.pipe(replace('.scss', '.wxss'))
+		.pipe(replace('%ASSETS_IMG%/', res))
 		.pipe(replace('src/assets/images', res)) // 雪碧图CSS RUL 中的图片路径
 		.pipe(gulp.dest(paths.dist.baseDir))
 }
@@ -140,10 +141,10 @@ function copyWXML() {
 
 // 重写WXML 中 image 标签中的图片路径
 function wxmlImgRewrite() {
-	var res = config.assetsCDN + config.qcloud.prefix;
+	var res = config.assetsCDN + config.qcloud.prefix + '/';
 	// console.log(res);
 	return gulp.src(paths.src.wxmlFiles)
-		.pipe(replace('../../assets/images', res))
+		.pipe(replace('%ASSETS_IMG%/', res))
 		.pipe(gulp.dest(paths.dist.baseDir))
 }
 
