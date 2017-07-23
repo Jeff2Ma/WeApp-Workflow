@@ -2,11 +2,13 @@
   <a href="https://github.com/Jeff2Ma/WeApp-Workflow" target="_blank"><img src="src/assets/images/weapp-worfkflow-banner2@2x.jpg" alt="WeApp-Workflow"></a>
 </p>
 
-> WeApp-Workflow：基于Gulp 的微信小程序前端开发工作流
+> [WeApp-Workflow](https://github.com/Jeff2Ma/WeApp-Workflow)：基于Gulp 的微信小程序前端开发工作流
 
 ## 介绍
 
 WeApp-Workflow 是一个专门为开发微信小程序打造的前端开发工作流，基于Gulp 4 开发，旨在通过工作流的方式解决微信小程序开发过程中写前端代码的痛点。
+
+项目主页：[https://github.com/Jeff2Ma/WeApp-Workflow](https://github.com/Jeff2Ma/WeApp-Workflow)
 
 文章介绍：[https://devework.com/weapp-workflow.html](https://devework.com/weapp-workflow.html)
 
@@ -41,7 +43,7 @@ WeApp-Workflow 是一个专门为开发微信小程序打造的前端开发工�
 
 ### 自动上传图片到CDN 并更新路径为https 绝对路径
 
-小程序不支持相对路径的图片引用，仅支持带https 的绝对路径。本工作流可以WXML 以及WXSS 文件中引用的相对路径图片上传到云存储CDN 或通过FTP/SFTP 协议上传到个人服务器空间。目前支持腾讯云，七牛云。
+小程序不支持相对路径的图片引用，仅支持带`https`协议头的绝对路径。本工作流可以将WXML 以及WXSS 文件中引用的相对路径图片上传到云存储CDN 或通过FTP/SFTP 协议上传到个人服务器空间。目前支持腾讯云，七牛云。
 
 ```html
 // Input: src/pages/index/index.wxml
@@ -53,7 +55,7 @@ WeApp-Workflow 是一个专门为开发微信小程序打造的前端开发工�
 
 ### Font 文件转为base64 编码
 
-小程序不支持相对路径的字体文件，本功能可以将CSS 中引用到的Font 文件转码为base64 并替换原路径。
+小程序不支持相对路径的字体文件，本工作流可将CSS 中引用到的Font 文件转码为base64 并替换原路径。
 
 ```
 // Input: src/pages/index/index.scss
@@ -157,7 +159,7 @@ WeApp-Workflow 是一个专门为开发微信小程序打造的前端开发工�
 ```
 git clone https://github.com/Jeff2Ma/WeApp-Workflow
 ```
-2、建议删除`.git`目录
+2、建议删除`.git`目录（Windows 用户请手动删除）
 
 ```
 cd WeApp-Workflow
@@ -224,13 +226,13 @@ gulp
 
 - **SCSS 开发**：直接在`src/pages/page-name`下进行编辑`page-name.scss`，会自动转化为`page-name.wxss` 并放置到`dist`目录相应位置。开发过程中涉及到数值的地方直接写`px`单位（按iPhone6 为标准设计稿），会自动计算转化为`rpx`单位。如果特殊情况不想转化，请写大写的`PX`。
 
-- **WXML开发**：无特殊要求。
+- **WXML开发**：除**CDN 图片**功能需要特殊写图片路径外，其它无特殊要求。
 
 - **WebFont**：先在fontell.com 这类网站制作好雪碧图然后拿到ttf 格式的文件到`src/assets/fonts`下，常规方式引用即可自动base64 转码。
 
 - **CDN 图片**：（该功能默认关闭，需自行在设置项开启）微信小程序中wxss 或wxml 不支持相对路径的图片，需要https 开头的绝对路径。本工作流可以使得开发时候直接写相对路径，工作流会帮忙上传到CDN 并替换原路径。此类图片必须放置到`src/assets/images`下，然后在wxml 或CSS 中用`%ASSETS_IMG%/filename.png`的方式写路径。`%ASSETS_IMG%`为自定义的目录供后续字符串替换。
 
-- **雪碧图**：首先说明：在小程序中不建议用雪碧图，直接用单图或者WebFont 的形式更好。如果一定要用的话，按照代码中的小程序示例放置小图目录到`src/assets/sprites`下然后在SCSS 中通过`@lazysprite "xxxx"`调用即可（建议调用代码放到`app.scss`下）。
+- **雪碧图**：首先在小程序中不建议用雪碧图，直接用单图或者WebFont 的形式更好。如果一定要用，按照代码中的小程序示例放置**小图目录**到`src/assets/sprites`下然后在SCSS 中通过`@lazysprite "xxxx"`调用即可（建议调用代码放到`app.scss`下）。雪碧图高级用法请[点击这里](https://github.com/Jeff2Ma/postcss-lazysprite)。
 
 ## Q&A
 
@@ -255,8 +257,6 @@ gulp
 这些小程序采用 WeApp-Workflow 作为开发工作流（欢迎发PR 添加案例）：
 
 ![devework+微信小程序](src/assets/images/qr-r.jpg)
-
-DeveWork+ 微信小程序：[https://github.com/Jeff2Ma/DeveWork-WeApp](https://github.com/Jeff2Ma/DeveWork-WeApp)
 
 ## 鸣谢
 
