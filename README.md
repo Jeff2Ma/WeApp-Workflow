@@ -1,7 +1,3 @@
-<p align="center">
-  <a href="" target="_blank"><img src="" alt="WeApp-Workflow"></a>
-</p>
-
 ![https://github.com/Jeff2Ma/WeApp-Workflow](src/assets/images/weapp-worfkflow-banner2@2x.jpg)
 
 > [WeApp-Workflow](https://github.com/Jeff2Ma/WeApp-Workflow)：基于Gulp 的微信小程序前端开发工作流
