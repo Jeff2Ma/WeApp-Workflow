@@ -30,7 +30,7 @@ WeApp-Workflow 是一个专门为开发微信小程序打造的前端开发工�
 // Output: dist/pages/index/index.wxss
 .index__header {
 	font-size: 28rpx;
-	margin-top: 40PX; /* 如果为大写的`PX`单位则不会转换 */
+	margin-top: 20PX; /* 如果为大写的`PX`单位则不会转换 */
 }
 
 ```
