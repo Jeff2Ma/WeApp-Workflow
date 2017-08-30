@@ -1,0 +1,4 @@
+{
+  "client": "./dist",
+  "svr": "./server"
+}

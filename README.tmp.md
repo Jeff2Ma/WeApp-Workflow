@@ -1,8 +1,6 @@
 <p align="center">
-  <a href="" target="_blank"><img src="" alt="WeApp-Workflow"></a>
+  <a href="https://github.com/Jeff2Ma/WeApp-Workflow" target="_blank"><img src="src/assets/images/weapp-worfkflow-banner2@2x.jpg" alt="WeApp-Workflow"></a>
 </p>
-
-![https://github.com/Jeff2Ma/WeApp-Workflow](src/assets/images/weapp-worfkflow-banner2@2x.jpg)
 
 > [WeApp-Workflow](https://github.com/Jeff2Ma/WeApp-Workflow)：基于Gulp 的微信小程序前端开发工作流
 
@@ -156,13 +154,7 @@ WeApp-Workflow 是一个专门为开发微信小程序打造的前端开发工�
 
 ### 安装
 
-0、请先全局按照 Gulp4
-
-```
-npm install gulpjs/gulp#4.0 -g
-```
-
-1、通过`git clone`下载项目文件。
+1、首先通过`git clone`下载项目文件。
 
 ```
 git clone https://github.com/Jeff2Ma/WeApp-Workflow
@@ -206,8 +198,6 @@ gulp
 <p align="center">
 <img src="src/assets/images/s2.png" alt="WeApp-Workflow配置" style="max-width:600px;height: auto;">
 </p>
-
-**2018年8月30日更新：如果你使用的是新版小程序 IDE，可以直接选择整个项目目录，即`project.config.json` 所在的目录**
 
 
 2、建立并进入项目后，勾选如下两个选项（“ES6 转 ES5”、“样式补全”）。后两个选项视实际情况选择。
@@ -253,6 +243,30 @@ gulp
 - Q：为什么工作流中没有配置bable 的ES6 转ES5 的功能？
 
 	A：如上，微信开发者工具已经提供。
+	
+- Q：跟[WePY](https://github.com/wepyjs/wepy) 这类小程序开发框架相比优势在哪？
+
+	A：微信支付团队开发的WePY 确实是一个不错的工具。如果跟WePY 放到同一水平线对比，WeApp-Workflow 根本没有优势。WeApp-Workflow 是一个workflow 工具，不是一个开发框架，其侧重的是小程序中CSS 层面的开发，对于一部分开发者来说，他/她的小程序并不需要WePY 那么重的开发框架。 
+	
+- Q：WeApp-Workflow 没有相应专门的编译任务（类似`gulp build`,`npm run build`这种）？
+
+	A：是的，因为WeApp-Workflow 是适合用来开发“小”的小程序而非复杂的小程序，所以综合考虑开发速度、代码量等方面，没有专门的开发阶段一个任务(dev)，开发完成阶段额外一个编译任务(buid)。直接一个任务就行。
+	
+## 案例展示
+
+这些小程序采用 WeApp-Workflow 作为开发工作流（欢迎发PR 添加案例）：
+
+![devework+微信小程序](src/assets/images/qr-r.jpg)
+
+## 鸣谢
+
+[tmt-workflow](https://github.com/Tencent/tmt-workflow)
+
+[QMUI_Web](https://github.com/QMUI/QMUI_Web)
+
+[postcss-lazysprite](https://github.com/Jeff2Ma/postcss-lazysprite) 
+
+[gulp-qcloud-upload](https://github.com/Jeff2Ma/gulp-qcloud-upload)
 	
 ## TODO
 
