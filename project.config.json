@@ -1,4 +1,8 @@
 {
   "client": "./dist",
-  "svr": "./server"
+  "svr": "./server",
+  "setting": {
+    "postcss": true,
+    "es6": true
+  }
 }
