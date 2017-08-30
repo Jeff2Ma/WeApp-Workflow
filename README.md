@@ -8,8 +8,6 @@ WeApp-Workflow 是一个专门为开发微信小程序打造的前端开发工�
 
 项目主页：[https://github.com/Jeff2Ma/WeApp-Workflow](https://github.com/Jeff2Ma/WeApp-Workflow)
 
-文章介绍：[https://devework.com/weapp-workflow.html](https://devework.com/weapp-workflow.html)
-
 ## 功能
 
 ### SCSS 实时编译为 WXSS
@@ -175,7 +173,7 @@ rm -rf .git
 ```
 npm i
 ```
-> Gulp4 目前未正式发布，Windows 用户请先安装 [git](http://git-scm.com/)，然后在 [Git Bash](http://git-for-windows.github.io/) 下执行`npm i`即可（非 CMD）。
+> Gulp4 目前未正式发布，Windows 用户请先安装 [git]()，然后在 [Git Bash]() 下执行`npm i`即可（非 CMD）。
 
 4、启动开发
 
