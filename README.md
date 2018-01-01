@@ -152,10 +152,10 @@ WeApp-Workflow 是一个专门为开发微信小程序打造的前端开发工�
 
 ### 安装
 
-0、请先全局按照 Gulp4
+0、请先全局按照 Gulp-cli
 
 ```
-npm install gulpjs/gulp#4.0 -g
+npm install gulp-cli -g
 ```
 
 1、通过`git clone`下载项目文件。
@@ -175,7 +175,6 @@ rm -rf .git
 ```
 npm i
 ```
-> Gulp4 目前未正式发布，Windows 用户请先安装 [git]()，然后在 [Git Bash]() 下执行`npm i`即可（非 CMD）。
 
 4、启动开发
 
