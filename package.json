@@ -34,7 +34,7 @@
     "gulp-cached": "^1.1.1",
     "gulp-debug": "^3.1.0",
     "gulp-if": "^2.0.2",
-    "gulp-imagemin": "^3.3.0",
+    "gulp-imagemin": "^4.1.0",
     "gulp-newer": "^1.3.0",
     "gulp-postcss": "^7.0.0",
     "gulp-qcloud-upload": "^2.2.0",
@@ -46,6 +46,6 @@
     "postcss-font-base64": "^1.0.4",
     "postcss-lazysprite": "^1.8.0",
     "postcss-px2rpx": "0.0.4",
-    "yargs": "^8.0.2"
+    "yargs": "^11.0.0"
   }
 }
