@@ -1,0 +1,57 @@
+# Notes:
+#   - Minimal appveyor.yml file is an empty file. All sections are optional.
+#   - Indent each level of configuration with 2 spaces. Do not use tabs!
+#   - All section names are case-sensitive.
+#   - Section names should be unique on each level.
+
+#---------------------------------#
+#      general configuration      #
+#---------------------------------#
+
+# branches to build
+#branches:
+#  # whitelist
+#  only:
+#    - master
+#    - test
+
+# Do not build on tags (GitHub and BitBucket)
+skip_tags: true
+
+# Do not build feature branch with open Pull Requests
+skip_branch_with_pr: true
+
+# Build worker image (VM template)
+image: Visual Studio 2015
+
+environment:
+  matrix:
+    - nodejs_version: 4.7.0
+
+# scripts that run after cloning repository
+install:
+  # to run script as a PowerShell command prepend it with ps:
+  - ps: Install-Product node $env:nodejs_version
+  # batch commands start from cmd:
+  - npm cache clean
+  - npm i
+  - npm install -g gulp@next
+
+# to run your custom scripts instead of automatic tests
+test_script:
+  # Output useful info for debugging.
+  - node --version && npm --version
+  - npm i
+  - pwd
+  - gulp test
+
+# Don't actually build.
+build: off
+
+matrix:
+  fast_finish: true
+
+cache:
+  # local npm modules
+  - C:\Users\appveyor\AppData\Roaming\npm-cache -> package.json         # npm cache
+  - node_modules -> package.json
