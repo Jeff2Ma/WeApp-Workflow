@@ -4,6 +4,8 @@
 
 ## 介绍
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Jeff2Ma/WeApp-Workflow.svg)](https://greenkeeper.io/)
+
 WeApp-Workflow 是一个专门为开发微信小程序打造的前端开发工作流，基于Gulp 4 开发，旨在通过工作流的方式解决微信小程序开发过程中写前端代码的痛点。
 
 项目主页：[https://github.com/Jeff2Ma/WeApp-Workflow](https://github.com/Jeff2Ma/WeApp-Workflow)
