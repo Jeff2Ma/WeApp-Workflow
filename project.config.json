@@ -1,8 +1,14 @@
 {
-  "client": "./dist",
-  "svr": "./server",
-  "setting": {
-    "postcss": true,
-    "es6": true
-  }
+	"client": "./dist",
+	"svr": "./server",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"appid": "touristappid",
+	"projectname": "weapp-wf",
+	"condition": {}
 }

@@ -190,40 +190,15 @@ gulp
 
 ### 配置
 
-完成以上操作后，需要在“微信web 开发者工具”也进行相关设置。
+完成以上操作后，需要在“微信web 开发者工具”也进行相关设置（以 v1.x 为准，不再兼容 v0.x 版）。
 
-1、新建项目，记住选择`dist`文件夹作为项目目录。
+1、新建项目，直接选择整个项目目录，即`project.config.json` 所在的目录作为项目目录。
 
 <p align="center">
 <img src="src/assets/images/s1.png" alt="WeApp-Workflow配置" style="max-width:600px;height: auto;">
 </p>
 
-<p align="center">
-<img src="src/assets/images/s2.png" alt="WeApp-Workflow配置" style="max-width:600px;height: auto;">
-</p>
-
-**2018年8月30日更新：如果你使用的是新版小程序 IDE，可以直接选择整个项目目录，即`project.config.json` 所在的目录**
-
-
-2、建立并进入项目后，勾选如下两个选项（“ES6 转 ES5”、“样式补全”）。后两个选项视实际情况选择。
-
-<p align="center">
-<img src="src/assets/images/s3.png" alt="WeApp-Workflow配置" style="max-width:600px;height: auto;">
-</p>
-
-
-3、同时菜单项进入设置，勾选如下两个选项：
-
-<p align="center">
-<img src="src/assets/images/s4.png" alt="WeApp-Workflow配置" style="max-width:600px;height: auto;">
-</p>
-
-
 ### 开发
-
-<p align="center">
-<img src="src/assets/images/s5.png" alt="开发" style="max-width:600px;height: auto;">
-</p>
 
 接下来进入常规开发即可。开发过程中，**使用第三方编辑器（WebStorm、Sublime Text 等）编辑`src`目录下的文件**，保存修改后gulp 进程会实时编译到`dist`目录相应的位置。而**微信web 开发者工具会自动编译刷新，此时仅充当预览功能**。
 
@@ -248,15 +223,15 @@ gulp
 - Q：为什么工作流中没有配置bable 的ES6 转ES5 的功能？
 
 	A：如上，微信开发者工具已经提供。
-	
+
 - Q：跟[WePY](https://github.com/wepyjs/wepy) 这类小程序开发框架相比优势在哪？
 
-	A：微信支付团队开发的WePY 确实是一个不错的工具。如果跟WePY 放到同一水平线对比，WeApp-Workflow 根本没有优势。WeApp-Workflow 是一个workflow 工具，不是一个开发框架，其侧重的是小程序中CSS 层面的开发，对于一部分开发者来说，他/她的小程序并不需要WePY 那么重的开发框架。 
-	
+	A：微信支付团队开发的WePY 确实是一个不错的工具。如果跟WePY 放到同一水平线对比，WeApp-Workflow 根本没有优势。WeApp-Workflow 是一个workflow 工具，不是一个开发框架，其侧重的是小程序中CSS 层面的开发，对于一部分开发者来说，他/她的小程序并不需要WePY 那么重的开发框架。
+
 - Q：WeApp-Workflow 没有相应专门的编译任务（类似`gulp build`,`npm run build`这种）？
 
 	A：是的，因为WeApp-Workflow 是适合用来开发“小”的小程序而非复杂的小程序，所以综合考虑开发速度、代码量等方面，没有专门的开发阶段一个任务(dev)，开发完成阶段额外一个编译任务(buid)。直接一个任务就行。
-	
+
 ## 案例展示
 
 这些小程序采用 WeApp-Workflow 作为开发工作流（欢迎发PR 添加案例）：
@@ -269,12 +244,12 @@ gulp
 
 [QMUI_Web](https://github.com/QMUI/QMUI_Web)
 
-[postcss-lazysprite](https://github.com/Jeff2Ma/postcss-lazysprite) 
+[postcss-lazysprite](https://github.com/Jeff2Ma/postcss-lazysprite)
 
 [gulp-qcloud-upload](https://github.com/Jeff2Ma/gulp-qcloud-upload)
-	
 
-	
+
+
 ## TODO
 
 - [ ] 增加单元测试

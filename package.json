@@ -4,7 +4,8 @@
   "description": "A workflow for better weapp developing.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gulp test",
+    "dev": "gulp"
   },
   "repository": {
     "type": "git",
@@ -43,7 +44,7 @@
     "gulp-sftp": "^0.1.5",
     "gulp-util": "^3.0.8",
     "postcss-font-base64": "^1.0.4",
-    "postcss-lazysprite": "^1.7.0",
+    "postcss-lazysprite": "^1.8.0",
     "postcss-px2rpx": "0.0.4",
     "yargs": "^8.0.2"
   }
