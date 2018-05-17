@@ -39,7 +39,7 @@
     "gulp-postcss": "^7.0.0",
     "gulp-qcloud-upload": "^2.2.0",
     "gulp-rename": "^1.2.2",
-    "gulp-replace": "^0.6.1",
+    "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.0",
     "gulp-sftp": "^0.1.5",
     "gulp-util": "^3.0.8",
