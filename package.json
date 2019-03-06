@@ -46,6 +46,6 @@
     "postcss-font-base64": "^1.0.4",
     "postcss-lazysprite": "^2.0.0",
     "postcss-px2rpx": "0.0.4",
-    "yargs": "^13.1.0"
+    "yargs": "13.2.1"
   }
 }
