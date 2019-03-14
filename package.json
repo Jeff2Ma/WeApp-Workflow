@@ -44,7 +44,7 @@
     "gulp-sftp": "^0.1.5",
     "gulp-util": "^3.0.8",
     "postcss-font-base64": "^1.0.4",
-    "postcss-lazysprite": "^2.0.0",
+    "postcss-lazysprite": "^2.2.0",
     "postcss-px2rpx": "0.0.4",
     "yargs": "^13.1.0"
   }
