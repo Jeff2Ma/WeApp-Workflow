@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/Jeff2Ma/weapp-workflow#readme",
   "devDependencies": {
-    "del": "^4.0.0",
+    "del": "^5.0.0",
     "gulp": "^4.0.0",
     "gulp-cached": "^1.1.1",
     "gulp-debug": "^4.0.0",
