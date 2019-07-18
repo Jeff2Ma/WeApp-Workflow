@@ -33,7 +33,7 @@
     "gulp": "^4.0.0",
     "gulp-cached": "^1.1.1",
     "gulp-debug": "^4.0.0",
-    "gulp-if": "^2.0.2",
+    "gulp-if": "^3.0.0",
     "gulp-imagemin": "^5.0.0",
     "gulp-newer": "^1.3.0",
     "gulp-postcss": "^8.0.0",
